@@ -9,7 +9,7 @@ const clienteSchema = Schema({
     email: { type: String, required: true },
     password: { type: String, required: true },
     perfil: { type: String, default: "perfil.png", required: true },
-    telefono: { type: String, required: true },
+    telefono: { type: String, required: false },
     genero: { type: String, required: false },
     f_nacimiento: { type: String, required: false },
     dni: { type: String, required: false },

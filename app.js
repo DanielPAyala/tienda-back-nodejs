@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const port = process.env.PORT || 4201;
 
 const cliente_route = require('./routes/cliente');
+const admin_route = require('./routes/admin');
 
 mongoose.connect('mongodb://localhost:27017/tienda', (err, res) => {
     if (err) {
@@ -32,5 +33,6 @@ app.use((req,res,next)=>{
 });
 
 app.use('/api', cliente_route);
+app.use('/api', admin_route);
 
 module.exports = app;
