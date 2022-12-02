@@ -4,8 +4,10 @@ const app = express();
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 
+// Port
 const port = process.env.PORT || 4201;
 
+// Routes
 const cliente_route = require('./routes/cliente');
 const admin_route = require('./routes/admin');
 
@@ -17,7 +19,7 @@ mongoose.connect('mongodb://localhost:27017/tienda', (err, res) => {
         
         app.listen(port, () => {
             console.log('Servidor corriendo en el puerto ' + port);
-        })
+        });
     }
 });
 
